@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'index')));
 
 // 首頁
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index' ,'index.html'));
+    res.sendFile(path.join(__dirname,'index.html'));
 });
 
 // 註冊頁面
