@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中原二手交易網</title>
+    <link rel="stylesheet" href="seller_index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header_logo">
+            RENEW
+        </div>
+        <div class="subnav" id="computer">
+            <a class="contact" href="/index.html">Contact</a>
+            <a class="about" href="#">About</a>
+            <a class="home" href="#">Home</a>
+        </div>
+
+        <!-- 手機版本 -->
+        <div class="navbar" id="phone">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="checkbox">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+            <ul>
+                <li><a class="home" href="/index.html">Home</a></li>
+                <li><a class="about" href="#">About</a></li>
+                <li><a class="contact" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="inner">
+        <div class="inner_up"></div>
+        <div class="inner_down">
+            <div class="inner_left">
+                <input type="file" id="profile_pic_input" name="profile_pic" accept=".jpg, .jpeg, .png" style="display:none;">
+                <div class="profile_pic" id="profile_pic">
+                    <img id="profile_pic_preview" src="default-avatar.png" alt="頭像" style="width:150px;height:150px;border-radius:50%;">
+                </div>
+                <button onclick="document.getElementById('profile_pic_input').click()">上傳頭像</button>
+                <div class="textbox">
+                    <div class="text_name">黃X貞</div>
+                    <div style="margin-bottom: 5px;">已認證   ID:11127163</div>
+                    <div class="text">買家給您的評分: ★★★★★</div>
+                    <div class="text">賣家給您的評分: ★★★★★</div>
+                    <div class="text">面交地點:星巴克中原門市</div>
+                </div>
+            </div>
+            <div class="inner_right">
+                <div class="right_up">
+                    <button class="btn" id="my_items">
+                        我的商品
+                    </button>
+                    <button class="btn" id="message">
+                        聊天室
+                    </button>
+                    <button class="btn" id="update">
+                        我要上架
+                    </button>
+                </div>
+                <div class="right_down">
+                    <!-- 我的商品頁面 -->
+                    <div class="my_items">
+                        <!-- <div class="itemrow">
+                            <div class="item">
+                                <img src="${product.image_url}" alt="${product.name}" />
+                                    <h3>${product.name}</h3>
+                                    <p>價格: ${product.price}</p>
+                                    <p>新舊狀況: ${product.condition}</p>
+                                    <button data-product-id="${product.product_id}">編輯</button>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="message" style="display: none;">
+
+                    </div>
+                    <!-- 上架頁面 -->
+                    <div class="update">
+                        <h2>我要上架</h2>
+                        <form id="product-form" method="POST" enctype="multipart/form-data">
+                            <label for="name">商品名稱 (必填):</label>
+                            <input type="text" id="name" name="name" required><br>
+                
+                            <label for="price">價格 (必填):</label>
+                            <input type="number" id="price" name="price" required><br>
+                
+                            <label for="category">類別 (必填):</label>
+                            <input type="text" id="category" name="category" required><br>
+                
+                            <label for="condition">新舊狀況 (必填):</label>
+                            <select id="condition" name="condition" required>
+                                <option value="新品">新品</option>
+                                <option value="二手">二手</option>
+                                <option value="翻新">翻新</option>
+                            </select><br>
+                
+                            <label for="image">商品圖片 (可選):</label>
+                            <input type="file" id="image" name="image" accept="image/*"><br>
+                
+                            <label for="description">商品介紹 (可選):</label>
+                            <textarea id="description" name="description"></textarea><br>
+                
+                            <label for="quantity">商品數量:</label>
+                            <input type="number" id="quantity" name="quantity" value="1" min="1"><br>
+
+                            <button type="submit">上架商品</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="seller_index.js"></script>
+</body>
+</html>
